@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Countries App</string>
+    <string name="click_text">Click to display Countries List</string>
+    <string name="empty">" "</string>
+    <string name="capital">"Capital: "</string>
+    <string name="region">"Region: "</string>
+    <string name="country_name_info">"%1$s is commonly known as %2$s.\n"</string>
+    <string name="country_region_info">"This country is located in the region of %1$s"</string>
+    <string name="country_sub_region_info">" and the sub region is %1$s.\n"</string>
+    <string name="country_population_info">"The total population of %1$s is %2$s"</string>
+    <string name="country_capital_info">" and the capital is %1$s.\n"</string>
+    <string name="country_language_info">"Most common language(s) are %1$s. "</string>
+    <string name="country_timezone_info">"Timezone(s) of this region is(are) %1$s.\n"</string>
+    <string name="country_start_day_info">"%1$s is the start day of the week."</string>
+</resources>

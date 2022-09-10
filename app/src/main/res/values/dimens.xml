@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_width">320dp</dimen>
+    <dimen name="zero_width">0dp</dimen>
+
+    <!-- For common radius -->
+    <dimen name="common_radius">12dp</dimen>
+
+    <!-- For custom background -->
+    <dimen name="bg_radius">@dimen/common_radius</dimen>
+    <dimen name="bg_width">4dp</dimen>
+
+    <!-- For common margins -->
+    <dimen name="margin_width_4">4dp</dimen>
+    <dimen name="margin_width_8">8dp</dimen>
+    <dimen name="margin_width_12">12dp</dimen>
+    <dimen name="margin_width_20">20dp</dimen>
+    <dimen name="margin_width_24">24dp</dimen>
+
+    <!-- For Flag -->
+    <dimen name="flag_width">120dp</dimen>
+    <dimen name="flag_height">120dp</dimen>
+    <dimen name="details_flag_width">180dp</dimen>
+    <dimen name="details_flag_height">180dp</dimen>
+
+    <!-- For Text Size -->
+    <dimen name="text_size_16">16.00sp</dimen>
+    <dimen name="text_size_20">20.00sp</dimen>
+    <dimen name="text_size_24">24.00sp</dimen>
+
+</resources>

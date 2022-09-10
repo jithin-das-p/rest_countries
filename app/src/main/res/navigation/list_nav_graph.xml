@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/countries_list_nav_graph"
+    app:startDestination="@+id/mainMenuFragment">
+
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="com.jdp.countries.fragments.MainMenuFragment"
+        android:label="Welcome!!">
+        <action
+            android:id="@+id/action_mainMenuButton_to_countriesList"
+            app:destination="@+id/countriesListFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/countriesListFragment"
+        android:name="com.jdp.countries.fragments.CountriesListFragment"
+        android:label="Countries List">
+        <action
+            android:id="@+id/action_countriesList_to_detailView"
+            app:destination="@+id/detailsViewFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailsViewFragment"
+        android:name="com.jdp.countries.fragments.DetailsViewFragment"
+        android:label="Details">
+        <argument
+            android:name="countryItem"
+            app:argType="com.jdp.countries.data.CountryItem" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.jdp.countries.viewModel.SelectedCountryViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_width_20"
+        android:layout_marginTop="@dimen/margin_width_20"
+        android:layout_marginEnd="@dimen/margin_width_20"
+        android:layout_marginBottom="@dimen/margin_width_20"
+        android:background="@drawable/custom_background"
+        tools:context=".MainActivity">
+
+        <FrameLayout
+            android:id="@+id/flagContainer"
+            android:layout_width="@dimen/details_flag_width"
+            android:layout_height="@dimen/details_flag_height"
+            android:layout_marginStart="@dimen/margin_width_12"
+            android:layout_marginTop="@dimen/margin_width_4"
+            android:layout_marginEnd="@dimen/margin_width_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/worldImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/loading"
+                app:loadSvg="@{viewModel.countryItem.flags.svg}" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/officialName"
+            android:layout_width="@dimen/zero_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_width_12"
+            android:layout_marginTop="@dimen/margin_width_12"
+            android:layout_marginEnd="@dimen/margin_width_8"
+            android:text="@{viewModel.countryItem.name.official}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_24"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/flagContainer"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/detailsView"
+            android:layout_width="@dimen/zero_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_width_12"
+            android:layout_marginTop="@dimen/margin_width_4"
+            android:layout_marginEnd="@dimen/margin_width_8"
+            android:layout_marginBottom="@dimen/margin_width_20"
+            android:text="@{viewModel.getDetailedInfo()}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/flagContainer"
+            app:layout_constraintTop_toBottomOf="@id/officialName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
